@@ -1,0 +1,19 @@
+#Name:Fangming Tian
+#Research Seminar Project HW#2 
+#EDA on US_Accidents_Dec20
+#Mar_17th_2021
+library(skimr)
+library(DataExplorer)
+library(ggplot2)
+data = read.csv("US_Accidents_Dec20.csv",header=TRUE)
+head(data)
+skim(data)
+#day/night table 
+sunrise_table = table(data[,'Sunrise_Sunset'])
+barplot(sunrise_table)
+
+ 
+
+#weather
+weather_table = table(data[,'State'])
+barplot(weather_table)
